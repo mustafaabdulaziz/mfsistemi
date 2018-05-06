@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Muafiyet Sistemi Yeni Kayıt Sayfası</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/form-elements.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+		        <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}">
+    </head>
+
+    <body>       	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>Muafiyet Sistemi</strong> yeni kayıt sayfası</h1>
+                            <div class="description">
+                            	<p>
+	                            	 
+	                            	şartları okumak için <a <strong>Basınız</strong></a>
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<strong>Aşağıdaki bilgilerinizi doldurarak Muafiyet Sitemine kayıt olunuz</strong>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" method="POST" action="" class="form-horizontal">{% csrf_token %}
+									<div calss="container">
+                            <!--        <div class="form-group">
+										<select id="country" class="form-control">
+										{% for item in okuls %}
+											<option value="{{item.okul_name}}">{{item.okul_name}}</option>
+										{% endfor %}
+										</select>
+									</div>              
+                                    <div class="form-group">
+			                    		
+			                        	<input type="text" name="form-bölüm adı" placeholder="bölüm adı" class="form-bölüm adı form-control" id="form-bolumAdi">
+			                        </div>
+									<div class="form-group">
+			                        	<input type="text" name="form-adı ve soyadı" placeholder="adı ve soyadı" class="form-kullanıcı form-control" id="form-kullanici">
+			                        </div>
+			                    	<div class="form-group">
+			                    		
+			                        	<input type="text" name="form-öğrenci numarası" placeholder="öğrenci numarası" class="form-öğrenciNo form-control" id="form-ogrNo">
+			                        </div>
+			                        <div class="form-group">
+			                        	
+			                        	<input type="text" name="form-E-posta" placeholder="E-posta" class="form-Eposta form-control" id="form-email">
+			                        </div> -->
+                                    {% for field in form %}
+                                        <div class="form-group">
+                                            {{field}}
+                                        </div>
+                                    {% endfor %}
+                                    
+                                    </div>          
+			                        <button type="submit" class="btn btn-primary btn-block">Kayıt ol</button>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+					
+                    <div class="row">
+                        	<h3>zaten kayıtlıysanız:</h3>
+	                        	<a class="btn btn-link-2" href="#">
+	                        		 giriş yap
+	                        	</a>
+                    </div>
+                </div>
+            </div> 
+
+
+        <!-- Javascript -->
+        
+        <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    </body>
+
+</html>
