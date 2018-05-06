@@ -4,6 +4,7 @@ from django.conf.urls import url,include
 from muafiyetogr import views
 
 
+
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^signup$', views.Signup,name="Signup"),
