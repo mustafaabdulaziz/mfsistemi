@@ -11,8 +11,7 @@ class OgrenciForm(forms.ModelForm):
 	ogr_number= forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'öğrenci numarası','id':'form-ogrNo'}))
 	ogr_email= forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control','placeholder':'E-posta','id':'form-email'}))
 	ogr_password= forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password','id':'form-password'}))
-	ogr_resim= froms.ImageField()
-	
+
 
 	
 	class Meta:

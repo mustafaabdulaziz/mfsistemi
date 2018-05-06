@@ -19,7 +19,7 @@ class Ogrenci(models.Model):
 	ogr_email = models.EmailField(max_length=100,unique=True)
 	ogr_password = models.CharField(max_length=50)
 	ogr_telefon = models.CharField(max_length=15)
-	ogr_photo = models.ImageField(upload_to='ogr_resim')
+	ogr_photo = models.FileField()
 	date_created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
